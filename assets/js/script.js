@@ -100,6 +100,7 @@ $(".list-group").on("click","span", function(){
   });
   //automatically bring up the calendar
   dateInput.trigger("focus");
+});
   //value of due date was changed
   $(".list-group").on("change","input[type='text']", function(){
     //get current text
@@ -129,8 +130,6 @@ $(".list-group").on("click","span", function(){
   // Pass task's <li> element into auditTask() to check new due date
   auditTask($(taskSpan).closest(".list-group-item"));
    });
-})
-
 
 // modal was triggered
 $("#task-form-modal").on("show.bs.modal", function() {
@@ -173,6 +172,7 @@ $("#remove-tasks").on("click", function() {
   }
   saveTasks();
 });
+//enable draggable/sortable feature on list-group
 $(".card .list-group").sortable({
   connectWith: $(".card .list-group"),
   scroll:false,
