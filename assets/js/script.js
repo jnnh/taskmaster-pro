@@ -107,7 +107,7 @@ $(".list-group").on("click","span", function(){
       .index();
 
     //update task in array and re-save to localstorage
-   tasks[status][index].date=date;
+   tasks[status][index].date = date;
    saveTasks();
 
     //recreate span element with bootstrap classes
